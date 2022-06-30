@@ -21,6 +21,9 @@ jobs:
         distribution: 'temurin'
         cache: 'gradle'
         
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+        
     - name: Gradle build
       run: ./gradlew build --no-daemon
 
